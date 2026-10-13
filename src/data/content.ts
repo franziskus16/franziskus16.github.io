@@ -83,7 +83,7 @@ export const projects: Project[] = [
 export const experience: Job[] = [
   {
     period: "2025 – Present",
-    role: "Front-End Developer & UX/UI Designer",
+    role: "Senior Front-End Developer",
     company: "Your New Self (Multiestetica)",
     place: "Barcelona",
     summary:
