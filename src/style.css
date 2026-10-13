@@ -1,0 +1,134 @@
+:root {
+  --bg: #111111;
+  --surface: #1a1a18;
+  --surface-2: #23231f;
+  --line: #2a2a27;
+  --line-strong: #3a3a36;
+  --ink: #f2f2ee;
+  --muted: #c9c9c2;
+  --subtle: #a3a39c;
+  --accent: #f5ea1a;
+  --accent-ink: #111111;
+
+  --font: "Archivo Variable", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+  --page: min(1200px, 100% - 48px);
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.55 var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--ink);
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.page {
+  width: var(--page);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: 120px 40px;
+}
+
+.section-title {
+  font-weight: 900;
+  font-size: clamp(36px, 5vw, 64px);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.mono {
+  font-family: var(--mono);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 26px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--line-strong);
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.button--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.button--primary:hover {
+  background: #fff35a;
+  color: var(--accent-ink);
+}
+
+.button:not(.button--primary):hover {
+  border-color: var(--ink);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding-block: 80px 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+  }
+}
