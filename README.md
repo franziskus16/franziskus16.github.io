@@ -2,7 +2,7 @@
 
 My personal portfolio: a single page with my projects, experience and contact details.
 
-**Live:** https://franziskus16.github.io/
+**Live:** https://francescgimenez.com
 
 ![Portfolio](docs/preview.png)
 
